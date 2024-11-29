@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shop</title>
+   
+    <link rel="stylesheet" href="style.css">
+   
+  </head>
+  <body>
+
+
+<nav>
+  <menu>
+    <a href="#"><li>Title</li></a>
+    <a href="#" class="topNav"><li>Blog</li></a>
+    <a href="#" class="topNav"><li>Products</li></a>
+    <a href="#" class="topNav"><li>About</li></a>
+    <a href="#" class="topNav"><li>Forum</li></a>
+    <a href="#" class="topNav"><li>Download</li></a>
+    <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9001;</li></a>
+  </menu>
+  <menu class="sidebar">
+    <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9002;</li></a>
+    <a href="#"><li>Blog</li></a>
+    <a href="#"><li>Products</li></a>
+    <a href="#"><li>About</li></a>
+    <a href="#"><li>Forum</li></a>
+    <a href="#"><li>Download</li></a>
+  </menu>  
+</nav>
+<main>
+  <h1>How set up responsive Nav Bar?</h1>
+  <ol>
+    <li>Start with basic markup for the list of items to navigate to.</li>
+    <li>Style the nav with a background, then the menu with the list style set to none, and a flexbox, justifying to the end and aligning links to the center.</li>
+    <li>Declare a height for the anchor tags, list items match the anchor height. The children will define the height of the parent nav bar.</li>
+    <li>Apply inline padding to the links, remove default text decoration from anchor tags if customizing. Set the parent elements as display flex and align links to the center.</li>
+    <li>Put the logo nav element to the left by selecting the first child of the nav bar, and setting automatic margin to the right.</li>
+    <li>Copy the list of navigation links into another menu with the class sidebar. Style the sidebar to be removed by default, toggleable by resize or button.</li>
+  </ol>
+</main>
+<footer>
+  <a href="https://youtu.be/U8smiWQ8Seg">Reference</a>
+</footer>
+<script>
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarButton = document.querySelector("#sidebarButton");
+  function toggleSidebar() {
+    if(sidebar.style.display == 'flex') {
+      sidebar.style.display = 'none';
+      // sidebarButton.innerHTML = "&#9001";
+      return;
+    }
+    sidebar.style.display = 'flex';
+    // sidebarButton.innerHTML = "&#9002";
+  }
+</script>
+
+
+</body>
+</html>
