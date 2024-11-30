@@ -1,7 +1,12 @@
 :root {
-    --bg-img: url(https://cdn.shopify.com/s/files/1/0163/6622/files/Landscape_Photo_Tips.jpg?v=1660006499);
-    --vp-height: calc(100svh - 4rem);
-  } 
+  --bg-img: url('https://cdn.stocksnap.io/img-thumbs/960w/tablets-pills_LT8Q65T7MA.jpg'); /* Updated direct image URL */
+    background-image: var(--bg-img); /* Apply the custom property */
+ background-repeat: no-repeat;
+  background-size: cover;         /* Ensure the image covers the entire viewport */
+  background-position: center;    /* Center the image */
+}
+
+
   body {
   /*   height: var(--vp-height); */
     font-family: sans-serif;
@@ -89,17 +94,16 @@
   ol li {
     max-width: calc(100svw - 6rem);
   }
-  footer {
-    footer {
+   footer {
         background-color: #333; /* Footer background color */
         color: white; /* Footer text color */
         text-align: center;
         padding: 10px 0;
-        position: relative; /* Ensure no content overlaps */
+        position: fixed; /* Ensure no content overlaps */
         bottom: 0;
+		right: 0;
         width: 100%; /* Full width footer */
       }
-  }
   @media (width > 800px) {
     #sidebarButton {
       display: none;
