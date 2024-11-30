@@ -2,11 +2,16 @@
     --bg-img: url(https://cdn.shopify.com/s/files/1/0163/6622/files/Landscape_Photo_Tips.jpg?v=1660006499);
     --vp-height: calc(100svh - 4rem);
   } 
-  body {
-  /*   height: var(--vp-height); */
-    font-family: sans-serif;
-    line-height: 2;
-  }
+ body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Make sure the body covers the full height of the screen */
+        display: flex;
+        flex-direction: column; /* Use flexbox for layout */
+      }
+
+    
+
   h1 {
     margin: 2ch 0;
     text-align: center;
