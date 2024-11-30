@@ -90,8 +90,15 @@
     max-width: calc(100svw - 6rem);
   }
   footer {
-    min-height: 2ch;
-    text-align: center;
+    footer {
+        background-color: #333; /* Footer background color */
+        color: white; /* Footer text color */
+        text-align: center;
+        padding: 10px 0;
+        position: relative; /* Ensure no content overlaps */
+        bottom: 0;
+        width: 100%; /* Full width footer */
+      }
   }
   @media (width > 800px) {
     #sidebarButton {
