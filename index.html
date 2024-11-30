@@ -5,54 +5,95 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Shop</title>
-   
     <link rel="stylesheet" href="style.css">
-   
+    <style>
+      /* Add global styles */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Make sure the body covers the full height of the screen */
+        display: flex;
+        flex-direction: column; /* Use flexbox for layout */
+      }
+
+      main {
+        flex: 1; /* Make main content take up remaining space */
+        padding: 20px; /* Add some padding for spacing */
+        text-align: center;
+      }
+
+      footer {
+        background-color: #333; /* Footer background color */
+        color: white; /* Footer text color */
+        text-align: center;
+        padding: 10px 0;
+        position: relative; /* Ensure no content overlaps */
+        bottom: 0;
+        width: 100%; /* Full width footer */
+      }
+
+      nav menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #222;
+        color: white;
+      }
+
+      nav menu li {
+        padding: 10px;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      marquee {
+        color: #444;
+      }
+    </style>
   </head>
   <body>
-
-
-<nav>
-  <menu>
-    <a href="#"><li>Shopping Store</li></a>
-   
-    <a href="#" class="topNav"><li>Login</li></a>
-    <a href="#" class="topNav"><li>Register</li></a>
-    <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9001;</li></a>
-  </menu>
-  <menu class="sidebar">
-    <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9002;</li></a>
-    <a href="#"><li>Login</li></a>
-    <a href="#"><li>Register</li></a>
-  </menu>  
-</nav>
-<main>
-  <h1>🌟Something amazing is on the way! </h1>
-  <ol><li></li>
-    <h6>🛍️ Get ready for the ultimate shopping experience.</h6>
-    <h6>🚀 Launching soon with exclusive deals and offers!</h6>
-    <h6>🎉 From fashion to lifestyle, we’ve got it all covered.</h6>
-    <h6>📅 Mark your calendars – you don’t want to miss this!</h6>
-    <h6>🖤 Stay tuned for updates and sneak peeks!</h6>
-  </li></ol>
-</main>
-<footer>
-  <a href="">Reference</a>
-</footer>
-<script>
-  const sidebar = document.querySelector(".sidebar");
-  const sidebarButton = document.querySelector("#sidebarButton");
-  function toggleSidebar() {
-    if(sidebar.style.display == 'flex') {
-      sidebar.style.display = 'none';
-      // sidebarButton.innerHTML = "&#9001";
-      return;
-    }
-    sidebar.style.display = 'flex';
-    // sidebarButton.innerHTML = "&#9002";
-  }
-</script>
-
-
-</body>
+    <nav>
+      <menu>
+        <a href="#"><li>Alvi Pharmacy & general store</li></a>
+        <a href="#" class="topNav"><li>Home</li></a>
+        <a href="#" class="topNav"><li>Products</li></a> 
+        <a href="#" class="topNav"><li>About Us</li></a>
+        <a href="#" class="topNav"><li>Contact Us</li></a>
+        <a href="#" class="topNav"><li>Login</li></a>
+        <a href="#" class="topNav"><li>Register</li></a>
+        <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9001;</li></a>
+      </menu>
+      <menu class="sidebar">
+        <a href="#"><li id="sidebarButton" onclick="toggleSidebar()">&#9002;</li></a>
+        <a href="#" class="topNav"><li>Home</li></a>
+        <a href="#" class="topNav"><li>Products</li></a>
+        <a href="#" class="topNav"><li>About Us</li></a>
+        <a href="#" class="topNav"><li>Contact Us</li></a>
+        <a href="#"><li>Login</li></a>
+        <a href="#"><li>Register</li></a>
+      </menu>  
+    </nav>
+    <main>
+      <br><br><br><br>
+      <marquee><h1>🚀 Launching soon with exclusive deals and offers!</h1></marquee>
+    </main>
+    <footer>
+      <a href="" style="color: white; text-decoration: none;">Reference</a>
+    </footer>
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarButton = document.querySelector("#sidebarButton");
+      function toggleSidebar() {
+        if(sidebar.style.display == 'flex') {
+          sidebar.style.display = 'none';
+          return;
+        }
+        sidebar.style.display = 'flex';
+      }
+    </script>
+  </body>
 </html>
+
